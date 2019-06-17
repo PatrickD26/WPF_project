@@ -1,4 +1,3 @@
-C:\Repos\WPF_project\WPF_project\obj\Debug\WPF_project.csprojAssemblyReference.cache
 C:\Repos\WPF_project\WPF_project\obj\Debug\Admin_log.g.cs
 C:\Repos\WPF_project\WPF_project\obj\Debug\Admin_modify.g.cs
 C:\Repos\WPF_project\WPF_project\obj\Debug\MainWindow.g.cs
@@ -17,3 +16,4 @@ C:\Repos\WPF_project\WPF_project\obj\Debug\WPF_project.csproj.GenerateResource.c
 C:\Repos\WPF_project\WPF_project\obj\Debug\WPF_project.csproj.CoreCompileInputs.cache
 C:\Repos\WPF_project\WPF_project\obj\Debug\WPF_project.exe
 C:\Repos\WPF_project\WPF_project\obj\Debug\WPF_project.pdb
+C:\Repos\WPF_project\WPF_project\obj\Debug\WPF_project.csprojAssemblyReference.cache
