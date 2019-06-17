@@ -17,3 +17,9 @@ C:\Repos\WPF_project\WPF_project\obj\Debug\WPF_project.csproj.CoreCompileInputs.
 C:\Repos\WPF_project\WPF_project\obj\Debug\WPF_project.exe
 C:\Repos\WPF_project\WPF_project\obj\Debug\WPF_project.pdb
 C:\Repos\WPF_project\WPF_project\obj\Debug\WPF_project.csprojAssemblyReference.cache
+C:\Repos\WPF_project\WPF_project\obj\Debug\Game\GameWelcome.g.cs
+C:\Repos\WPF_project\WPF_project\obj\Debug\Homepage\Homepage.g.cs
+C:\Repos\WPF_project\WPF_project\obj\Debug\Orientation\OrientationWelcome.g.cs
+C:\Repos\WPF_project\WPF_project\obj\Debug\Orientation\OrientationWelcome.baml
+C:\Repos\WPF_project\WPF_project\obj\Debug\Game\GameWelcome.baml
+C:\Repos\WPF_project\WPF_project\obj\Debug\Homepage\Homepage.baml

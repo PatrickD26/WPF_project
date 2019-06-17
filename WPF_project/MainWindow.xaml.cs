@@ -27,8 +27,8 @@ namespace WPF_project
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Admin_log admin_log = new Admin_log();
-            admin_log.Show();
+            Homepage.Homepage home = new Homepage.Homepage();
+            home.Show();
             this.Hide();
         }
     }
