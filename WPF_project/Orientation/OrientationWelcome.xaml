@@ -5,8 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_project.Orientation"
         mc:Ignorable="d"
-        Title="OrientationWelcome" Height="450" Width="800">
+        Title="Bienvenue dans la page d'orientation" Height="720" Width="1080">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Margin="131,78,133,0" TextWrapping="Wrap" Text="Bonjour et bienvenue sur cet écran qui va t'aider à t'orienter. Après un petit test, nous te proposerons une fiche métier qui pourrait correspondre à tes talents ! Tu pourras également voir les autres métiers liés aux système d'informations !" VerticalAlignment="Top" Height="164" Grid.ColumnSpan="2" FontSize="24"/>
+        <Button Grid.ColumnSpan="2" Content="Ton futur commence ici !" HorizontalAlignment="Left" Margin="369,345,0,0" VerticalAlignment="Top" Width="334" FontSize="20" Height="50"/>
+
     </Grid>
 </Window>
