@@ -26,7 +26,7 @@ namespace WPF_project.Game
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            Console.WriteLine("BONJOUR");
         }
     }
 }

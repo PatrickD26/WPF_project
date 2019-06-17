@@ -5,8 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_project.Homepage"
         mc:Ignorable="d"
-        Title="Homepage" Height="450" Width="800">
+        Title="Page d'accueil" Height="720" Width="1200">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock HorizontalAlignment="Left" Margin="351,83,0,0" TextWrapping="Wrap" Text="Bienvenue dans l'outil du CESI alternance !" VerticalAlignment="Top" FontSize="24" Height="32" Width="489" Grid.ColumnSpan="2"/>
+        <Button Content="Accès administrateur" HorizontalAlignment="Left" Margin="49,23,0,0" VerticalAlignment="Top" Width="209" Height="31" FontSize="20"/>
+        <TextBox Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="23" Margin="536,235,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="23" Margin="536,356,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="23" Margin="536,293,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Accéder à l'outil d'orientation" HorizontalAlignment="Left" Margin="331,427,0,0" VerticalAlignment="Top" Width="229" Height="31" FontSize="16"/>
+        <Button Content="Accéder au quizz" HorizontalAlignment="Left" Margin="35,427,0,0" VerticalAlignment="Top" Width="209" Height="31" FontSize="16" Grid.Column="1"/>
+        <Label Content="Nom :" HorizontalAlignment="Left" Margin="412,232,0,0" VerticalAlignment="Top"/>
+        <Label Content="Pseudonyme :" HorizontalAlignment="Left" Margin="412,356,0,0" VerticalAlignment="Top"/>
+        <Label Content="Prénom :" HorizontalAlignment="Left" Margin="412,293,0,0" VerticalAlignment="Top"/>
+
     </Grid>
 </Window>

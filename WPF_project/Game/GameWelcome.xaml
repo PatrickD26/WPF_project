@@ -5,8 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_project.Game"
         mc:Ignorable="d"
-        Title="Window1" Height="450" Width="800">
+        Title="Bienvenue dans le jeu !" Height="720" Width="1080">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock HorizontalAlignment="Left" Margin="224,123,0,0" TextWrapping="Wrap" Text="Bonjour {{nickname}} et bienvenue dans notre jeu pour tester tes connaissances !" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="176" Width="625" FontFamily="Times New Roman" FontSize="36"/>
+        <Button Content="Commencer &gt;" HorizontalAlignment="Left" Margin="336,81,0,0" Grid.Row="1" VerticalAlignment="Top" Width="398" Grid.ColumnSpan="2" Height="40" FontSize="20" Click="Button_Click"/>
     </Grid>
 </Window>
