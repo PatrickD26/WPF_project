@@ -10,26 +10,26 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace WPF_project
 {
     /// <summary>
-    /// Logique d'interaction pour MainWindow.xaml
+    /// Logique d'interaction pour Admin_log.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Admin_log : Window
     {
-        public MainWindow()
+        public Admin_log()
         {
             InitializeComponent();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Admin_log admin_log = new Admin_log();
-            admin_log.Show();
+            Admin_modify admin_modify = new Admin_modify();
+            admin_modify.Show();
             this.Hide();
         }
+
     }
 }
