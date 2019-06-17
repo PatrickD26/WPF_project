@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Repos\WPF_project\WPF_project\App.xaml
-31064049929
+6734916107
 
-7-1323567143
+111722974798
 151397803362
-Admin_log.xaml;Admin_modify.xaml;MainWindow.xaml;
+Admin_log.xaml;Admin_modify.xaml;MainWindow.xaml;Game\GameWelcome.xaml;Homepage\Homepage.xaml;Orientation\OrientationWelcome.xaml;
 
-False
+True
 
