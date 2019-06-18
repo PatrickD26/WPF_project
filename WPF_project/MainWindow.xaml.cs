@@ -27,7 +27,7 @@ namespace WPF_project
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Homepage.Homepage home = new Homepage.Homepage();
+            CoucheClient.Homepage.Homepage home = new CoucheClient.Homepage.Homepage();
             home.Show();
             this.Hide();
         }

@@ -12,24 +12,16 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace WPF_project
+namespace WPF_project.CoucheClient.Admin
 {
     /// <summary>
-    /// Logique d'interaction pour Admin_log.xaml
+    /// Logique d'interaction pour AdminModify.xaml
     /// </summary>
-    public partial class Admin_log : Window
+    public partial class AdminModify : Window
     {
-        public Admin_log()
+        public AdminModify()
         {
             InitializeComponent();
         }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            Admin_modify admin_modify = new Admin_modify();
-            admin_modify.Show();
-            this.Hide();
-        }
-
     }
 }

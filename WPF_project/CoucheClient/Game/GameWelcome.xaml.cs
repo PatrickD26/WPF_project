@@ -12,16 +12,21 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace WPF_project.Orientation
+namespace WPF_project.CoucheClient.Game
 {
     /// <summary>
-    /// Logique d'interaction pour OrientationWelcome.xaml
+    /// Logique d'interaction pour Window1.xaml
     /// </summary>
-    public partial class OrientationWelcome : Window
+    public partial class Game : Window
     {
-        public OrientationWelcome()
+        public Game()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Console.WriteLine("BONJOUR");
         }
     }
 }

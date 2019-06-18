@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\patri\source\repos\WPF_project\WPF_project\App.xaml
-4822414303
+646985970
 
-9-475847748
+16-578436471
 151397803362
-Game\GameWelcome.xaml;Homepage\Homepage.xaml;MainWindow.xaml;Orientation\OrientationWelcome.xaml;
+CoucheClient\Admin\AdminLog.xaml;CoucheClient\Admin\AdminModify.xaml;CoucheClient\Orientation\OrientationWelcome.xaml;MainWindow.xaml;CoucheClient\Game\GameWelcome.xaml;CoucheClient\Homepage\Homepage.xaml;
 
 True
 

@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace WPF_project.Homepage
+namespace WPF_project.CoucheClient.Homepage
 {
     /// <summary>
     /// Logique d'interaction pour Homepage.xaml
@@ -26,21 +26,19 @@ namespace WPF_project.Homepage
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Admin_log admin_log = new Admin_log();
+            CoucheClient.Admin.AdminLog admin_log = new CoucheClient.Admin.AdminLog();
             admin_log.Show();
             this.Hide();
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            Orientation.OrientationWelcome orientation = new Orientation.OrientationWelcome();
-            orientation.Show();
-            this.Hide();
+            CoucheClient.Orientation.OrientationWelcome orientation = new CoucheClient.Orientation.OrientationWelcome();          
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            Game.Window1 game = new Game.Window1();
+            CoucheClient.Game.Game game = new CoucheClient.Game.Game();
             game.Show();
             this.Hide();
         }

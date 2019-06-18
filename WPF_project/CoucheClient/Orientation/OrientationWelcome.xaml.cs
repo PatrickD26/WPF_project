@@ -10,23 +10,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WPF_project.Game
+namespace WPF_project.CoucheClient.Orientation
 {
     /// <summary>
-    /// Logique d'interaction pour Window1.xaml
+    /// Logique d'interaction pour OrientationWelcome.xaml
     /// </summary>
-    public partial class Window1 : Window
+    public partial class OrientationWelcome : Page
     {
-        public Window1()
+        public OrientationWelcome()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            Console.WriteLine("BONJOUR");
         }
     }
 }
