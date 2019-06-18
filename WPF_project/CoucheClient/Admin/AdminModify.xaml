@@ -9,7 +9,7 @@
     <Grid>
         <Label Content="Modifier: " HorizontalAlignment="Left" Margin="224,102,0,0" VerticalAlignment="Top" Width="167"/>
         <Button Content="Jeu" HorizontalAlignment="Left" Margin="267,209,0,0" VerticalAlignment="Top" Width="124" Height="25"/>
-        <Button Content="Orientation" HorizontalAlignment="Left" Margin="267,148,0,0" VerticalAlignment="Top" Width="124" Height="26"/>
+        <Button Content="Orientation" HorizontalAlignment="Left" Margin="267,148,0,0" VerticalAlignment="Top" Width="124" Height="26" Click="Button_Click"/>
 
     </Grid>
 </Page>

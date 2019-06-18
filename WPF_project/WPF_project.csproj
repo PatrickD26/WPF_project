@@ -68,6 +68,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="CoucheClient\Admin\OrientationAdminPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="CoucheClient\Orientation\OrientationWelcome.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -94,6 +98,9 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="CoucheClient\Admin\OrientationAdminPage.xaml.cs">
+      <DependentUpon>OrientationAdminPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CoucheClient\Orientation\OrientationWelcome.xaml.cs">
       <DependentUpon>OrientationWelcome.xaml</DependentUpon>
     </Compile>
@@ -115,6 +122,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\Question.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Repos\WPF_project\WPF_project\App.xaml
-646985970
+72096578317
 
-161644276811
-151397803362
-CoucheClient\Admin\AdminLog.xaml;CoucheClient\Admin\AdminModify.xaml;CoucheClient\Orientation\OrientationWelcome.xaml;MainWindow.xaml;CoucheClient\Game\GameWelcome.xaml;CoucheClient\Homepage\Homepage.xaml;
+18343901495
+1201669938995
+CoucheClient\Admin\AdminLog.xaml;CoucheClient\Admin\AdminModify.xaml;CoucheClient\Admin\OrientationAdminPage.xaml;CoucheClient\Orientation\OrientationWelcome.xaml;MainWindow.xaml;CoucheClient\Game\GameWelcome.xaml;CoucheClient\Homepage\Homepage.xaml;
 
-True
+False
 
