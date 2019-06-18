@@ -12,14 +12,14 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace WPF_project.Game
+namespace WPF_project.CoucheClient.Game
 {
     /// <summary>
     /// Logique d'interaction pour Window1.xaml
     /// </summary>
-    public partial class Window1 : Window
+    public partial class Game : Window
     {
-        public Window1()
+        public Game()
         {
             InitializeComponent();
         }

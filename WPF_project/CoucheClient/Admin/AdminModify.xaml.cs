@@ -12,14 +12,14 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace WPF_project.Homepage
+namespace WPF_project.CoucheClient.Admin
 {
     /// <summary>
-    /// Logique d'interaction pour Homepage.xaml
+    /// Logique d'interaction pour AdminModify.xaml
     /// </summary>
-    public partial class Homepage : Window
+    public partial class AdminModify : Window
     {
-        public Homepage()
+        public AdminModify()
         {
             InitializeComponent();
         }
