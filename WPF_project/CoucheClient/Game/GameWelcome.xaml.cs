@@ -17,7 +17,7 @@ namespace WPF_project.CoucheClient.Game
     /// <summary>
     /// Logique d'interaction pour Window1.xaml
     /// </summary>
-    public partial class Game : Window
+    public partial class Game : Page
     {
         public Game()
         {

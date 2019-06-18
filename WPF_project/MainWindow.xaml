@@ -5,9 +5,6 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_project"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Button Content="go" HorizontalAlignment="Left" Margin="366,187,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
-
-    </Grid>
+        Title="MainWindow" Height="720" Width="1080">
+    <Frame Name="MainFrame" HorizontalAlignment="Left" Height="710" Margin="0,0,-8,-21" VerticalAlignment="Top" Width="1080"/>
 </Window>

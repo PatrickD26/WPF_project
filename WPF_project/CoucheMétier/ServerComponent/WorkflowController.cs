@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WPF_project.CoucheMétier.WorkflowController
+namespace WPF_project.CoucheMétier.ServerComponent
 {
-    class WorkflowController
+    class ServerComponent
     {
     }
 }

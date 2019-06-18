@@ -47,3 +47,4 @@ C:\Users\patri\source\repos\WPF_project\WPF_project\obj\Debug\CoucheClient\Admin
 C:\Users\patri\source\repos\WPF_project\WPF_project\obj\Debug\CoucheClient\Orientation\OrientationWelcome.baml
 C:\Users\patri\source\repos\WPF_project\WPF_project\obj\Debug\CoucheClient\Game\GameWelcome.baml
 C:\Users\patri\source\repos\WPF_project\WPF_project\obj\Debug\CoucheClient\Homepage\Homepage.baml
+C:\Users\patri\source\repos\WPF_project\WPF_project\obj\Debug\WPF_project.csprojAssemblyReference.cache

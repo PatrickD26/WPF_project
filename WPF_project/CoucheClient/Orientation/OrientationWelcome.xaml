@@ -7,8 +7,4 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="OrientationWelcome">
-
-    <Grid>
-        
-    </Grid>
 </Page>

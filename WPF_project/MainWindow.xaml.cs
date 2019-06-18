@@ -23,13 +23,7 @@ namespace WPF_project
         public MainWindow()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            CoucheClient.Homepage.Homepage home = new CoucheClient.Homepage.Homepage();
-            home.Show();
-            this.Hide();
+            this.MainFrame.Source = new Uri("/CoucheClient/HomePage/Homepage.xaml", UriKind.Relative);
         }
     }
 }

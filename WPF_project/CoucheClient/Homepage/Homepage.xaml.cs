@@ -17,7 +17,7 @@ namespace WPF_project.CoucheClient.Homepage
     /// <summary>
     /// Logique d'interaction pour Homepage.xaml
     /// </summary>
-    public partial class Homepage : Window
+    public partial class Homepage : Page
     {
         public Homepage()
         {
@@ -26,21 +26,20 @@ namespace WPF_project.CoucheClient.Homepage
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            CoucheClient.Admin.AdminLog admin_log = new CoucheClient.Admin.AdminLog();
-            admin_log.Show();
-            this.Hide();
+            CoucheClient.Admin.AdminLog logPage = new CoucheClient.Admin.AdminLog();
+            this.NavigationService.Navigate(logPage);
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            CoucheClient.Orientation.OrientationWelcome orientation = new CoucheClient.Orientation.OrientationWelcome();          
+            CoucheClient.Orientation.OrientationWelcome orientationPage = new CoucheClient.Orientation.OrientationWelcome();
+            this.NavigationService.Navigate(orientationPage);
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            CoucheClient.Game.Game game = new CoucheClient.Game.Game();
-            game.Show();
-            this.Hide();
+            CoucheClient.Game.Game gamePage = new CoucheClient.Game.Game();
+            this.NavigationService.Navigate(gamePage);
         }
     }
 }

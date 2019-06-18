@@ -17,7 +17,7 @@ namespace WPF_project.CoucheClient.Admin
     /// <summary>
     /// Logique d'interaction pour AdminModify.xaml
     /// </summary>
-    public partial class AdminModify : Window
+    public partial class AdminModify : Page
     {
         public AdminModify()
         {

@@ -17,7 +17,7 @@ namespace WPF_project.CoucheClient.Admin
     /// <summary>
     /// Logique d'interaction pour Admin_log.xaml
     /// </summary>
-    public partial class AdminLog : Window
+    public partial class AdminLog : Page
     {
         public AdminLog()
         {
@@ -26,9 +26,8 @@ namespace WPF_project.CoucheClient.Admin
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            CoucheClient.Admin.AdminModify AdminModify = new CoucheClient.Admin.AdminModify ();
-            AdminModify.Show();
-            this.Hide();
+            CoucheClient.Admin.AdminModify adminModifyPage = new CoucheClient.Admin.AdminModify();
+            this.NavigationService.Navigate(adminModifyPage);
         }
 
     }

@@ -98,7 +98,7 @@
     <Compile Include="CoucheMétier\AccèsMétier\ContrôleurWorkflow.cs" />
     <Compile Include="CoucheMétier\AccèsMétier\Mappage.cs" />
     <Compile Include="CoucheMétier\ProcessGroup\ProcessGroup.cs" />
-    <Compile Include="CoucheMétier\WorkflowController\WorkflowController.cs" />
+    <Compile Include="CoucheMétier\ServerComponent\WorkflowController.cs" />
     <Compile Include="CoucheClient\Game\GameWelcome.xaml.cs">
       <DependentUpon>GameWelcome.xaml</DependentUpon>
     </Compile>
