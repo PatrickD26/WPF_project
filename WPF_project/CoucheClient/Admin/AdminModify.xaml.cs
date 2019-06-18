@@ -26,23 +26,20 @@ namespace WPF_project.CoucheClient.Admin
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Admin_log admin_log = new Admin_log();
-            admin_log.Show();
-            this.Hide();
+            AdminLog adminLogPage = new AdminLog();
+            this.NavigationService.Navigate(adminLogPage);
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            Orientation.OrientationWelcome orientation = new Orientation.OrientationWelcome();
-            orientation.Show();
-            this.Hide();
+            Orientation.OrientationWelcome orientationWelcomePage = new Orientation.OrientationWelcome();
+            this.NavigationService.Navigate(orientationWelcomePage);
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            Game.Window1 game = new Game.Window1();
-            game.Show();
-            this.Hide();
+            Game.Game gamePage = new Game.Game();
+            this.NavigationService.Navigate(gamePage);
         }
     }
 }
