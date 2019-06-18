@@ -24,6 +24,8 @@ namespace WPF_project
         {
             InitializeComponent();
             this.MainFrame.Source = new Uri("/CoucheClient/HomePage/Homepage.xaml", UriKind.Relative);
+            ConnectionBdd dbConnection = new ConnectionBdd();
+            dbConnection.userService.RetrieveUserRanking();
         }
     }
 }

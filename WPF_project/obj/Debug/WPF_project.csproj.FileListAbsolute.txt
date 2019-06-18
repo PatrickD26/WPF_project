@@ -69,3 +69,4 @@ C:\Users\patri\source\repos\WPF_project\WPF_project\bin\Debug\System.Runtime.Com
 C:\Users\patri\source\repos\WPF_project\WPF_project\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\patri\source\repos\WPF_project\WPF_project\bin\Debug\System.Buffers.xml
 C:\Users\patri\source\repos\WPF_project\WPF_project\obj\Debug\WPF_project.csproj.CopyComplete
+C:\Repos\WPF_project\WPF_project\obj\Debug\CoucheClient\Admin\OrientationAdminPage.g.cs

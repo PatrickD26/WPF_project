@@ -109,6 +109,8 @@
     <Compile Include="CoucheMétier\AccèsMétier\Mappage.cs" />
     <Compile Include="CoucheMétier\ProcessGroup\ProcessGroup.cs" />
     <Compile Include="CoucheMétier\ServerComponent\ConnectionBdd.cs" />
+    <Compile Include="CoucheMétier\ServerComponent\GameServerComponent.cs" />
+    <Compile Include="CoucheMétier\ServerComponent\OrientationServerComponent.cs" />
     <Compile Include="CoucheMétier\ServerComponent\ServerComponent.cs" />
     <Compile Include="CoucheClient\Game\GameWelcome.xaml.cs">
       <DependentUpon>GameWelcome.xaml</DependentUpon>
@@ -116,6 +118,7 @@
     <Compile Include="CoucheClient\Homepage\Homepage.xaml.cs">
       <DependentUpon>Homepage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CoucheMétier\ServerComponent\UserServerComponent.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
