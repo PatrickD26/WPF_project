@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\patri\source\repos\WPF_project\WPF_project\obj\Debug\
+C:\Repos\WPF_project\WPF_project\obj\Debug\
 WPF_project
 none
 false
 DEBUG;TRACE
-C:\Users\patri\source\repos\WPF_project\WPF_project\App.xaml
+C:\Repos\WPF_project\WPF_project\App.xaml
 646985970
 
-15529459492
+162028445204
 151397803362
 CoucheClient\Admin\AdminLog.xaml;CoucheClient\Admin\AdminModify.xaml;CoucheClient\Orientation\OrientationWelcome.xaml;MainWindow.xaml;CoucheClient\Game\GameWelcome.xaml;CoucheClient\Homepage\Homepage.xaml;
 
-False
+True
 
