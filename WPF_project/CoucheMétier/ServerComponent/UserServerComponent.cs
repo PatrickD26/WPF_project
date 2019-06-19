@@ -20,7 +20,7 @@ namespace WPF_project.CoucheMétier.ServerComponent
         public void RetrieveUserRanking()
         {
              
-            NpgsqlCommand command = new NpgsqlCommand("select * from public.player", connection);
+            NpgsqlCommand command = new NpgsqlCommand("select * from public.player limit 10", connection);
             try
             {
                 this.connection.Open();

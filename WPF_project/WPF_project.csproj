@@ -125,6 +125,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\Player.cs" />
+    <Compile Include="Models\Email.cs" />
+    <Compile Include="Models\Filiere.cs" />
+    <Compile Include="Models\Admin.cs" />
+    <Compile Include="Models\Response.cs" />
     <Compile Include="Models\Question.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
