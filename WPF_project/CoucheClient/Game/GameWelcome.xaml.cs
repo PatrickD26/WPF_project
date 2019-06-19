@@ -24,7 +24,7 @@ namespace WPF_project.CoucheClient.Game
         {
             InitializeComponent();
             MainWindow win = (MainWindow)System.Windows.Application.Current.MainWindow;
-            win.dbConnection.gameService.retrieveGameQuestions();
+            questionArray = win.dbConnection.gameService.retrieveGameQuestions();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

@@ -17,7 +17,7 @@ namespace WPF_project.CoucheMétier.ServerComponent
             this.connection = dbConnect;
         }
 
-        public void retrieveGameQuestions()
+        public List<Models.Question> retrieveGameQuestions()
         {
             NpgsqlCommand command = new NpgsqlCommand("select * from question where isgame=true", connection);
             List<Models.Question> questionArray = new List<Models.Question>();
@@ -28,13 +28,13 @@ namespace WPF_project.CoucheMétier.ServerComponent
                 while (dataReader.Read())
                 {
                     MessageBox.Show((String)dataReader[1]);
-                    //Models.Question retrievedQuestion = new Models.Question();
-                    //retrievedQuestion.IsGame = (bool)dataReader[0];
-                    //retrievedQuestion.Label = (String)dataReader[1];
-                    //retrievedQuestion.IsOrientation = (bool)dataReader[2];
-                    //retrievedQuestion.Id = (int)dataReader[3];
-                    //retrievedQuestion.QuestionAnswers = retrieveGameAnswers(retrievedQuestion);
-                    //questionArray.Add(retrievedQuestion); 
+                    Models.Question retrievedQuestion = new Models.Question();
+                    retrievedQuestion.IsGame = (bool)dataReader[0];
+                    retrievedQuestion.Label = (String)dataReader[1];
+                    retrievedQuestion.IsOrientation = (bool)dataReader[2];
+                    retrievedQuestion.Id = (int)dataReader[3];
+                    retrievedQuestion.QuestionAnswers = retrieveGameAnswers(retrievedQuestion);
+                    questionArray.Add(retrievedQuestion); 
                 }
                 this.connection.Close();
             }
@@ -42,7 +42,7 @@ namespace WPF_project.CoucheMétier.ServerComponent
             {
                 MessageBox.Show(e.Message);
             }
-          //  return questionArray;
+            return questionArray;
         }
 
         public List<Models.Response> retrieveGameAnswers(Models.Question question)
