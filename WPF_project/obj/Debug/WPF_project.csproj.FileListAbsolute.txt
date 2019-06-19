@@ -82,3 +82,4 @@ C:\Repos\WPF_project\WPF_project\obj\Debug\CoucheClient\Orientation\OrientationW
 C:\Repos\WPF_project\WPF_project\obj\Debug\CoucheClient\Game\GameWelcome.baml
 C:\Repos\WPF_project\WPF_project\obj\Debug\CoucheClient\Homepage\Homepage.baml
 C:\Repos\WPF_project\WPF_project\obj\Debug\WPF_project.csproj.CopyComplete
+C:\Users\patri\source\repos\WPF_project\WPF_project\obj\Debug\CoucheClient\Admin\OrientationAdminPage.g.cs
