@@ -23,8 +23,6 @@ namespace WPF_project.CoucheClient.Admin
     public partial class OrientationAdminPage : Page
     {
         NpgsqlConnection connection;
-        private DataSet ds = new DataSet();
-        private DataTable dt = new DataTable();
 
         public OrientationAdminPage()
         {
@@ -34,7 +32,10 @@ namespace WPF_project.CoucheClient.Admin
         public OrientationAdminPage(NpgsqlConnection connection)
         {
             this.connection = connection;
+            InitializeComponent();
+
             RetriveOrientationQuestion();
+
         }
 
 
@@ -55,17 +56,17 @@ namespace WPF_project.CoucheClient.Admin
                 NpgsqlDataReader dateReader = com.ExecuteReader();
                 while (dateReader.Read())
                 {
-                    Models.Question question = new Models.Question() {
+                    Models.Question question = new Models.Question()
+                    {
 
                         Id = Int32.Parse(dateReader[0].ToString()),
                         IsGame = (bool)dateReader[1],
                         Label = dateReader[2].ToString(),
                         ResponseId = Int32.Parse(dateReader[3].ToString()),
                         IsOrientation = (bool)dateReader[4]
-                    }
+                    };
 
                     questions.Add(question);
-
 
                 }
 
