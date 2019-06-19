@@ -19,9 +19,12 @@ namespace WPF_project.CoucheClient.Game
     /// </summary>
     public partial class Game : Page
     {
+        List<Models.Question> questionArray;
         public Game()
         {
             InitializeComponent();
+            MainWindow win = (MainWindow)System.Windows.Application.Current.MainWindow;
+            win.dbConnection.gameService.retrieveGameQuestions();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

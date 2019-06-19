@@ -24,7 +24,7 @@ namespace WPF_project.CoucheClient.Admin
     public partial class OrientationAdminPage : Page
     {
 
-        public OrientationAdminPage(NpgsqlConnection connection)
+        public OrientationAdminPage()
         {
             InitializeComponent();
             MainWindow win = (MainWindow)System.Windows.Application.Current.MainWindow;

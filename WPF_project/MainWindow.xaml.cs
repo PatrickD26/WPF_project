@@ -20,15 +20,12 @@ namespace WPF_project
     /// </summary>
     public partial class MainWindow : Window
     {
-        public List<Models.Question> orientationQuestions;
         public ConnectionBdd dbConnection;
         public MainWindow()
         {
             InitializeComponent();
             this.MainFrame.Source = new Uri("/CoucheClient/HomePage/Homepage.xaml", UriKind.Relative);
             dbConnection = new ConnectionBdd();
-            dbConnection.userService.RetrieveUserRanking();
-            
         }
     }
 }

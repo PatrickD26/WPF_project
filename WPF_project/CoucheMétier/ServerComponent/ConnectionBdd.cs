@@ -11,10 +11,10 @@ namespace WPF_project
     public class ConnectionBdd
     {
         public static string connectionString = String.Format("Server={0};Port={1};User Id ={2};Password={3};Database={4}",
-            "localhost", 5432, "postgres", "test", "ways");
+            "localhost", 5432, "postgres", "1004", "ways");
         public static NpgsqlConnection connection = new NpgsqlConnection(connectionString);
         public UserServerComponent userService = new UserServerComponent(connection);
         public OrientationServerComponent orientationServerComponent = new OrientationServerComponent(connection);
-
+        public GameServerComponent gameService = new GameServerComponent(connection);
     }
 }
