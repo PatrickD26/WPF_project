@@ -26,8 +26,9 @@ namespace WPF_project.CoucheClient.Admin
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-           // OrientationAdminPage orientationAdminPage = new OrientationAdminPage();
-          //  this.NavigationService.Navigate(orientationAdminPage);
+           // OrientationAdminPage orientationAdminPage = (orientationAdminPage)System.Windows.Application.Current.;
+            OrientationAdminPage orientationAdminPage = new OrientationAdminPage();
+            this.NavigationService.Navigate(orientationAdminPage);
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)

@@ -14,7 +14,7 @@ namespace WPF_project
             "localhost", 5432, "postgres", "test", "ways");
         public static NpgsqlConnection connection = new NpgsqlConnection(connectionString);
         public UserServerComponent userService = new UserServerComponent(connection);
-        public OrientationServerComponent orientationServerComponent = new OrientationServerComponent(connection);
-
+        public OrientationServerComponent orientationService = new OrientationServerComponent(connection);
+        public GameServerComponent gameService = new GameServerComponent(connection);
     }
 }

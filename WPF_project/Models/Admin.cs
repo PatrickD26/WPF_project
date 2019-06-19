@@ -15,4 +15,5 @@ namespace WPF_project.Models
         public int Id { get => id; set => id = value; }
         public string Login { get => login; set => login = value; }
         public string Mdp { get => mdp; set => mdp = value; }
+    }
 }

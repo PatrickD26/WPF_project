@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WPF_project.Models
 {
-    class Response
+    public class Response
     {
         private int id;
         private int questionid;
