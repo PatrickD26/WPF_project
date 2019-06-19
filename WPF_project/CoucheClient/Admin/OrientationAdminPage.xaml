@@ -10,6 +10,17 @@
 
     <Grid>
         <Label Content="Orientation questions" HorizontalAlignment="Left" Margin="99,72,0,0" VerticalAlignment="Top" Height="32" Width="352"/>
+        <ListView HorizontalAlignment="Left" Height="148" Margin="99,139,0,0" VerticalAlignment="Top" Width="461" ItemsSource="{Binding questions}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding Id}" Header="Id" Width="70"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding IsGame}" Header="IsGame" Width="70"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Label}" Header="Label" Width="70"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding ResponseId}" Header="ResponseId" Width="70"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding IsOrientation}" Header="IsOrientation" Width="70"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
 
     </Grid>
 </Page>
