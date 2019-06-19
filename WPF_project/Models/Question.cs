@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WPF_project.Models
 {
-    class Question
+    public class Question
     {
         private int id;
         private bool isGame;

@@ -14,30 +14,7 @@ namespace WPF_project
             "localhost", 5432, "postgres", "test", "ways");
         public static NpgsqlConnection connection = new NpgsqlConnection(connectionString);
         public UserServerComponent userService = new UserServerComponent(connection);
-        public OrientationAdminPage orientationAdminPage = new OrientationAdminPage(connection);
-
-        
-      
-        public NpgsqlConnection ConnectToDataBase()
-        {
-            
-            try
-            {
-                connection.Open();
-                MessageBox.Show("connection ok");
-                return connection;
-            }
-            catch
-            {
-                MessageBox.Show("erreur de connection à la base de données");
-            }
-
-            return connection;
-
-        }
-
-
-
+        public OrientationServerComponent orientationServerComponent = new OrientationServerComponent(connection);
 
     }
 }
