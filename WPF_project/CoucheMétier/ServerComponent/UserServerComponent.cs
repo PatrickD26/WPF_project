@@ -14,7 +14,8 @@ namespace WPF_project.CoucheMétier.ServerComponent
 
         public UserServerComponent(NpgsqlConnection dbConnect){
            this.connection = dbConnect;
-            }
+        }
+
         public void RetrieveUserRanking()
         {
                
