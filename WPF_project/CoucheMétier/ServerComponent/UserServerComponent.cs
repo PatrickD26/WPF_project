@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace WPF_project.CoucheMétier.ServerComponent
 {
@@ -18,18 +19,21 @@ namespace WPF_project.CoucheMétier.ServerComponent
 
         public void RetrieveUserRanking()
         {
-               
-            NpgsqlCommand command = new NpgsqlCommand("select * from public.Question where IsOrientation = true");
+             
+            NpgsqlCommand command = new NpgsqlCommand("select * from public.player", connection);
             try
             {
                 this.connection.Open();
-                //NpgsqlDataReader dataReader = command.ExecuteReader();
-                Console.WriteLine("ça marche !");
+                NpgsqlDataReader dataReader = command.ExecuteReader();
+                while (dataReader.Read())
+                {
+                    MessageBox.Show(dataReader[1].ToString());
+                }
                 this.connection.Close();
             }
-            catch
+            catch (Exception e)
             {
-                Console.WriteLine("hello");
+                MessageBox.Show(e.Message);
             }
         }
     }
