@@ -20,6 +20,7 @@ namespace WPF_project.CoucheClient.Game
     public partial class Game : Page
     {
         List<Models.Question> questionArray;
+        int score = 0;
         public Game()
         {
             InitializeComponent();
@@ -34,6 +35,11 @@ namespace WPF_project.CoucheClient.Game
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Console.WriteLine("BONJOUR");
+        }
+
+        private void correctAnswer()
+        {
+            score += 1;
         }
     }
 }
