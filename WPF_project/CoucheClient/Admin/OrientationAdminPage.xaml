@@ -6,21 +6,70 @@
       xmlns:local="clr-namespace:WPF_project.CoucheClient.Admin"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="OrientationAdminPage">
+      Title="OrientationAdminPage" Height="720" Width="1080">
 
     <Grid>
-        <Label Content="Orientation questions" HorizontalAlignment="Left" Margin="99,72,0,0" VerticalAlignment="Top" Height="32" Width="352"/>
-        <ListView HorizontalAlignment="Left" Height="148" Margin="99,139,0,0" VerticalAlignment="Top" Width="461" ItemsSource="{Binding questions}">
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="360" Margin="650,70,0,0" Stroke="Black" VerticalAlignment="Top" Width="389"/>
+
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="148" Margin="162,492,0,0" Stroke="Black" VerticalAlignment="Top" Width="746"/>
+
+        <Label Content="Orientation questions" HorizontalAlignment="Left" Margin="21,18,0,0" VerticalAlignment="Top" Height="32" Width="352"/>
+        <ListView x:Name="listeViewQuestion" HorizontalAlignment="Left" Height="148" Margin="21,70,0,0" VerticalAlignment="Top" Width="461" ItemsSource="{Binding questions}">
             <ListView.View>
                 <GridView>
                     <GridViewColumn DisplayMemberBinding="{Binding Id}" Header="Id" Width="70"/>
                     <GridViewColumn DisplayMemberBinding="{Binding IsGame}" Header="IsGame" Width="70"/>
                     <GridViewColumn DisplayMemberBinding="{Binding Label}" Header="Label" Width="70"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding ResponseId}" Header="ResponseId" Width="70"/>
                     <GridViewColumn DisplayMemberBinding="{Binding IsOrientation}" Header="IsOrientation" Width="70"/>
                 </GridView>
             </ListView.View>
         </ListView>
+        <Button Content="Ajouter" HorizontalAlignment="Left" Margin="756,550,0,0" VerticalAlignment="Top" Width="68" RenderTransformOrigin="-22.804,10.325" Click="Button_Add"/>
+        <Button Content="-" HorizontalAlignment="Left" Margin="487,71,0,0" VerticalAlignment="Top" Width="23" Click="Button_Delete" RenderTransformOrigin="0.348,-0.825"/>
+        <Button Content="Modifier" HorizontalAlignment="Left" Margin="487,96,0,0" VerticalAlignment="Top" Width="53" Click="Button_Modif_Orientation"/>
+        <ComboBox x:Name="ComboBoxIsGame" HorizontalAlignment="Left" Margin="178,548,0,0" VerticalAlignment="Top" Width="64">
+            <ComboBoxItem Content="true"/>
+            <ComboBoxItem Content="false" IsSelected="True"/>
+        </ComboBox>
+        <TextBox x:Name="Label" HorizontalAlignment="Left" Height="24" Margin="262,548,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="206"/>
+        <TextBox x:Name="Reponse1" HorizontalAlignment="Left" Height="24" Margin="502,548,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <TextBox  x:Name="Reponse2" HorizontalAlignment="Left" Height="24" Margin="502,574,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="Reponse3" HorizontalAlignment="Left" Height="24" Margin="502,602,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="ComboBoxIsOrientation" HorizontalAlignment="Left" Margin="662,550,0,0" VerticalAlignment="Top" Width="64">
+            <ComboBoxItem Content="true"/>
+            <ComboBoxItem Content="false" IsSelected="True"/>
+        </ComboBox>
+        <Label Content="IsGame" HorizontalAlignment="Left" Margin="178,518,0,0" VerticalAlignment="Top" Width="78"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="262,518,0,0" VerticalAlignment="Top" Width="78"/>
+        <Label Content="Responses" HorizontalAlignment="Left" Margin="502,518,0,0" VerticalAlignment="Top" Width="78"/>
+        <Label Content="IsOrientation" HorizontalAlignment="Left" Margin="662,518,0,0" VerticalAlignment="Top" Width="78"/>
+        <Label Content="Ajouter une question" HorizontalAlignment="Left" Margin="452,462,0,0" VerticalAlignment="Top" Width="194"/>
+        <Label Content="Game questions" HorizontalAlignment="Left" Margin="21,230,0,0" VerticalAlignment="Top" Height="32" Width="352"/>
+        <ListView x:Name="listeViewQuestionGame" HorizontalAlignment="Left" Height="148" Margin="21,282,0,0" VerticalAlignment="Top" Width="461" ItemsSource="{Binding questionsGame}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding Id}" Header="Id" Width="70"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding IsGame}" Header="IsGame" Width="70"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Label}" Header="Label" Width="70"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding IsOrientation}" Header="IsOrientation" Width="70"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button Content="-" HorizontalAlignment="Left" Margin="487,284,0,0" VerticalAlignment="Top" Width="23" Click="Button_DeleteGame" RenderTransformOrigin="0.348,-0.825"/>
+        <Button Content="Modifier" HorizontalAlignment="Left" Margin="487,308,0,0" VerticalAlignment="Top" Width="53" Click="Button_Modif_Game"/>
+        <Label Content="Modifier" HorizontalAlignment="Left" Margin="662,39,0,0" VerticalAlignment="Top" Width="78"/>
+
+        <TextBox x:Name="ModifLabel" HorizontalAlignment="Left" Height="23" Margin="662,133,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="ModifReponse1" HorizontalAlignment="Left" Height="24" Margin="662,196,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="314"/>
+        <TextBox x:Name="ModifReponse2" HorizontalAlignment="Left" Height="22" Margin="662,226,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="314"/>
+        <TextBox x:Name="ModifReponse3" HorizontalAlignment="Left" Height="22" Margin="662,254,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="314"/>
+
+        <Label Content="Réponses" HorizontalAlignment="Left" Margin="662,166,0,0" VerticalAlignment="Top" Width="78"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="662,104,0,0" VerticalAlignment="Top" Width="78"/>
+        <Button Content="Annuler" HorizontalAlignment="Left" Margin="866,399,0,0" VerticalAlignment="Top" Width="74" Click="Button_Annuler_Modif"/>
+        <Button Content="Valider" HorizontalAlignment="Left" Margin="951,399,0,0" VerticalAlignment="Top" Width="74" Click="Button_Valider_Modif"/>
+        <Button Content="Up" HorizontalAlignment="Left" Margin="487,130,0,0" VerticalAlignment="Top" Width="23" RenderTransformOrigin="0.348,-0.05" Click="Button_Orientation_Up"/>
+        <Button Content="Down" HorizontalAlignment="Left" Margin="487,155,0,0" VerticalAlignment="Top" Width="23" RenderTransformOrigin="0.348,-0.05" Click="Button_Orientation_Down"/>
 
     </Grid>
 </Page>

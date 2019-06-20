@@ -119,6 +119,7 @@
     <Compile Include="CoucheMétier\AccèsMétier\Mappage.cs" />
     <Compile Include="CoucheMétier\ProcessGroup\ProcessGroup.cs" />
     <Compile Include="CoucheMétier\ServerComponent\ConnectionBdd.cs" />
+    <Compile Include="CoucheMétier\ServerComponent\ConnectionServerComponent.cs" />
     <Compile Include="CoucheMétier\ServerComponent\GameServerComponent.cs" />
     <Compile Include="CoucheMétier\ServerComponent\OrientationServerComponent.cs" />
     <Compile Include="CoucheMétier\ServerComponent\ServerComponent.cs" />
