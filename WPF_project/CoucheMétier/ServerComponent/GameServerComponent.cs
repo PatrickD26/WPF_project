@@ -20,7 +20,7 @@ namespace WPF_project.CoucheMétier.ServerComponent
 
 
 
-        public List<Models.Question> RetriveOrientationQuestionGame()
+        public List<Models.Question> RetrieveGameQuestions()
         {
             List<Models.Question> questions = new List<Models.Question>();
             string sql = @"SELECT * FROM QUESTION WHERE ISGAME = true";
@@ -81,7 +81,7 @@ namespace WPF_project.CoucheMétier.ServerComponent
             }
         }
 
-        public List<Models.Response> GetResponsesByQuestionId(int id)
+        public List<Models.Response> GetQuestionAnswers(int id)
         {
             List<Models.Response> responses = new List<Models.Response>();
             NpgsqlCommand command = new NpgsqlCommand("SELECT * FROM RESPONSE WHERE QUESTIONID = :questionId", connection);

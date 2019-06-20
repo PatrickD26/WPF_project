@@ -25,10 +25,10 @@ namespace WPF_project.CoucheClient.Game
         {
             InitializeComponent();
             MainWindow win = (MainWindow)System.Windows.Application.Current.MainWindow;
-            questionArray = win.dbConnection.gameService.retrieveGameQuestions();
+            questionArray = win.dbConnection.gameService.RetrieveGameQuestions();
             foreach(Models.Question question in questionArray)
             {
-                question.QuestionAnswers = win.dbConnection.gameService.retrieveGameAnswers(question);
+                question.QuestionAnswers = win.dbConnection.gameService.GetQuestionAnswers(question.Id);
             }
         }
 
