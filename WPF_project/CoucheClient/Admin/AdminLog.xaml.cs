@@ -19,6 +19,8 @@ namespace WPF_project.CoucheClient.Admin
     /// </summary>
     public partial class AdminLog : Page
     {
+        MainWindow win = (MainWindow)System.Windows.Application.Current.MainWindow;
+
         public AdminLog()
         {
             InitializeComponent();
@@ -26,8 +28,31 @@ namespace WPF_project.CoucheClient.Admin
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            CoucheClient.Admin.AdminModify adminModifyPage = new CoucheClient.Admin.AdminModify();
-            this.NavigationService.Navigate(adminModifyPage);
+            if (login.Text != "" && password.Text != "")
+            {
+                Models.Admin identifiers = new Models.Admin()
+                {
+                    Login = login.Text,
+                    Mdp = password.Text
+                };
+
+                int authorized = win.dbConnection.connectionService.ControlAccess(identifiers);
+                if(authorized != 0)
+                {
+                    CoucheClient.Admin.OrientationAdminPage adminModifyPage = new CoucheClient.Admin.OrientationAdminPage();
+                    this.NavigationService.Navigate(adminModifyPage);
+                }
+                else
+                {
+                    MessageBox.Show("Login ou mot de passe incorrect.");
+                }
+            } else
+            {
+                MessageBox.Show("Veuillez remplir tout les champs.");
+            }
+
+
+
         }
 
     }

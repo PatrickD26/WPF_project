@@ -68,6 +68,8 @@
         <Label Content="Label" HorizontalAlignment="Left" Margin="662,104,0,0" VerticalAlignment="Top" Width="78"/>
         <Button Content="Annuler" HorizontalAlignment="Left" Margin="866,399,0,0" VerticalAlignment="Top" Width="74" Click="Button_Annuler_Modif"/>
         <Button Content="Valider" HorizontalAlignment="Left" Margin="951,399,0,0" VerticalAlignment="Top" Width="74" Click="Button_Valider_Modif"/>
+        <Button Content="Up" HorizontalAlignment="Left" Margin="487,130,0,0" VerticalAlignment="Top" Width="23" RenderTransformOrigin="0.348,-0.05" Click="Button_Orientation_Up"/>
+        <Button Content="Down" HorizontalAlignment="Left" Margin="487,155,0,0" VerticalAlignment="Top" Width="23" RenderTransformOrigin="0.348,-0.05" Click="Button_Orientation_Down"/>
 
     </Grid>
 </Page>

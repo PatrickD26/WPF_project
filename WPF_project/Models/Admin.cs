@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WPF_project.Models
 {
-    class Admin
+    public class Admin
     {
         private int id;
         private string login;

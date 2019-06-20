@@ -208,5 +208,15 @@ namespace WPF_project.CoucheClient.Admin
             ModifReponse2.Text = "";
             ModifReponse3.Text = "";
         }
+
+        private void Button_Orientation_Down(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Orientation_Up(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

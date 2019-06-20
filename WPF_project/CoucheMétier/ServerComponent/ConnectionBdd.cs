@@ -16,5 +16,6 @@ namespace WPF_project
         public UserServerComponent userService = new UserServerComponent(connection);
         public OrientationServerComponent orientationService = new OrientationServerComponent(connection);
         public GameServerComponent gameService = new GameServerComponent(connection);
+        public ConnectionServerComponent connectionService = new ConnectionServerComponent(connection);
     }
 }
