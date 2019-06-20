@@ -23,15 +23,13 @@ namespace WPF_project.CoucheMétier.ServerComponent
         public List<Models.Question> RetriveOrientationQuestion()
         {
             List<Models.Question> questions = new List<Models.Question>();
-            string sql = @"SELECT * FROM QUESTION WHERE ISORIENTATION = true";
-            NpgsqlCommand com = connection.CreateCommand();
-            com.CommandText = sql;
+            NpgsqlCommand command = new NpgsqlCommand("SELECT ISGAME,LABEL,ISORIENTATION,ID,ORDRE,FILIERE,ANSWER FROM QUESTION WHERE ISORIENTATION = true", connection);
 
             try
             {
                 this.connection.Open();
 
-                NpgsqlDataReader dataReader = com.ExecuteReader();
+                NpgsqlDataReader dataReader = command.ExecuteReader();
                 while (dataReader.Read())
                 {
                     Models.Question question = new Models.Question()
@@ -39,11 +37,13 @@ namespace WPF_project.CoucheMétier.ServerComponent
                         IsGame = (bool)dataReader[0],
                         Label = dataReader[1].ToString(),
                         IsOrientation = (bool)dataReader[2],
-                        Id = Int32.Parse(dataReader[3].ToString())
+                        Id = Int32.Parse(dataReader[3].ToString()),
+                        Ordre = Int32.Parse(dataReader[4].ToString()),
+                        FiliereId = Int32.Parse(dataReader[5].ToString()),
+                        Answer = Int32.Parse(dataReader[6].ToString()),
                     };
 
                     questions.Add(question);
-
                 }
                 
                 this.connection.Close();
@@ -84,7 +84,7 @@ namespace WPF_project.CoucheMétier.ServerComponent
 
         public void AddQuestion(Models.Question q)
         {
-            NpgsqlCommand command = new NpgsqlCommand("INSERT INTO QUESTION(isgame, label, isorientation, filiere) VALUES (:isGame, :label, :isOrientation, :filiereId)", connection);
+            NpgsqlCommand command = new NpgsqlCommand("INSERT INTO QUESTION(isgame, label, isorientation, filiere, answer) VALUES (:isGame, :label, :isOrientation, :filiereId, :rightAnswer)", connection);
 
             command.Parameters.Add(new NpgsqlParameter("isGame", NpgsqlDbType.Boolean));
             command.Parameters[0].Value = q.IsGame;
@@ -94,6 +94,8 @@ namespace WPF_project.CoucheMétier.ServerComponent
             command.Parameters[2].Value = q.IsOrientation;
             command.Parameters.Add(new NpgsqlParameter("filiereId", NpgsqlDbType.Integer));
             command.Parameters[3].Value = q.FiliereId;
+            command.Parameters.Add(new NpgsqlParameter("rightAnswer", NpgsqlDbType.Integer));
+            command.Parameters[4].Value = q.Answer;
 
             try
             {
@@ -135,6 +137,36 @@ namespace WPF_project.CoucheMétier.ServerComponent
             }
           
         }
+
+        public List<int> GetResponseIdQuestionId(int questionId)
+        {
+            List<int> responsesId = new List<int>();
+
+            NpgsqlCommand command = new NpgsqlCommand("SELECT ID FROM RESPONSE WHERE QUESTIONID = :qId", connection);
+            command.Parameters.Add(new NpgsqlParameter("qId", NpgsqlDbType.Integer));
+            command.Parameters[0].Value = questionId;
+
+            try
+            {
+                this.connection.Open();
+                NpgsqlDataReader dataReader = command.ExecuteReader();
+                while (dataReader.Read())
+                {
+                    int responseId = Int32.Parse(dataReader[0].ToString());
+                    responsesId.Add(responseId);
+                }
+                this.connection.Close();
+                return responsesId;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Connection fail: " + e.Message);
+                this.connection.Close();
+                return responsesId;
+            }
+
+        }
+
 
         public void AddResponse(Models.Response r)
         {
@@ -229,6 +261,30 @@ namespace WPF_project.CoucheMétier.ServerComponent
             command.Parameters.Add(new NpgsqlParameter("responseId", NpgsqlDbType.Integer));
             command.Parameters[2].Value = reponseId;
 
+
+            try
+            {
+                this.connection.Open();
+                command.ExecuteNonQuery();
+                this.connection.Close();
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Connection fail: " + e.Message);
+                this.connection.Close();
+            }
+        }
+
+
+        public void UpdateQuestionRightResponse(int responseId, int idQuestionAdd)
+        {
+            NpgsqlCommand command = new NpgsqlCommand("UPDATE QUESTION SET ANSWER = :id WHERE ID = :questionId", connection);
+
+            command.Parameters.Add(new NpgsqlParameter("id", NpgsqlDbType.Integer));
+            command.Parameters[0].Value = responseId;
+            command.Parameters.Add(new NpgsqlParameter("questionId", NpgsqlDbType.Integer));
+            command.Parameters[1].Value = idQuestionAdd;
 
             try
             {

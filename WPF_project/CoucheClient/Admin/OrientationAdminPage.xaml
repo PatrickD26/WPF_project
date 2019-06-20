@@ -11,7 +11,7 @@
     <Grid>
         <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="360" Margin="650,70,0,0" Stroke="Black" VerticalAlignment="Top" Width="389"/>
 
-        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="148" Margin="162,492,0,0" Stroke="Black" VerticalAlignment="Top" Width="778"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="148" Margin="162,492,0,0" Stroke="Black" VerticalAlignment="Top" Width="863"/>
 
         <Label Content="Orientation questions" HorizontalAlignment="Left" Margin="21,18,0,0" VerticalAlignment="Top" Height="32" Width="352"/>
         <ListView x:Name="listeViewQuestion" HorizontalAlignment="Left" Height="148" Margin="21,70,0,0" VerticalAlignment="Top" Width="461" ItemsSource="{Binding questions}">
@@ -24,7 +24,7 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button Content="Ajouter" HorizontalAlignment="Left" Margin="851,550,0,0" VerticalAlignment="Top" Width="68" RenderTransformOrigin="-22.804,10.325" Click="Button_Add"/>
+        <Button Content="Ajouter" HorizontalAlignment="Left" Margin="929,550,0,0" VerticalAlignment="Top" Width="68" RenderTransformOrigin="-22.804,10.325" Click="Button_Add"/>
         <Button Content="-" HorizontalAlignment="Left" Margin="487,71,0,0" VerticalAlignment="Top" Width="23" Click="Button_Delete" RenderTransformOrigin="0.348,-0.825"/>
         <Button Content="Modifier" HorizontalAlignment="Left" Margin="487,96,0,0" VerticalAlignment="Top" Width="53" Click="Button_Modif_Orientation"/>
         <ComboBox x:Name="ComboBoxIsGame" HorizontalAlignment="Left" Margin="178,548,0,0" VerticalAlignment="Top" Width="64">
@@ -32,17 +32,17 @@
             <ComboBoxItem Content="false" IsSelected="True"/>
         </ComboBox>
         <TextBox x:Name="Label" HorizontalAlignment="Left" Height="24" Margin="262,548,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="206"/>
-        <TextBox x:Name="Reponse1" HorizontalAlignment="Left" Height="24" Margin="502,548,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
-        <TextBox  x:Name="Reponse2" HorizontalAlignment="Left" Height="24" Margin="502,574,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="Reponse3" HorizontalAlignment="Left" Height="24" Margin="502,602,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
-        <ComboBox x:Name="ComboBoxIsOrientation" HorizontalAlignment="Left" Margin="662,550,0,0" VerticalAlignment="Top" Width="64">
+        <TextBox x:Name="Reponse1" HorizontalAlignment="Left" Height="24" Margin="476,548,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <TextBox  x:Name="Reponse2" HorizontalAlignment="Left" Height="24" Margin="476,574,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="Reponse3" HorizontalAlignment="Left" Height="24" Margin="476,602,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="ComboBoxIsOrientation" HorizontalAlignment="Left" Margin="748,550,0,0" VerticalAlignment="Top" Width="64">
             <ComboBoxItem Content="true"/>
             <ComboBoxItem Content="false" IsSelected="True"/>
         </ComboBox>
         <Label Content="IsGame" HorizontalAlignment="Left" Margin="178,518,0,0" VerticalAlignment="Top" Width="78"/>
         <Label Content="Label" HorizontalAlignment="Left" Margin="262,518,0,0" VerticalAlignment="Top" Width="78"/>
-        <Label Content="Responses" HorizontalAlignment="Left" Margin="502,518,0,0" VerticalAlignment="Top" Width="78"/>
-        <Label Content="IsOrientation" HorizontalAlignment="Left" Margin="662,518,0,0" VerticalAlignment="Top" Width="78"/>
+        <Label Content="Responses" HorizontalAlignment="Left" Margin="476,518,0,0" VerticalAlignment="Top" Width="78"/>
+        <Label Content="IsOrientation" HorizontalAlignment="Left" Margin="740,518,0,0" VerticalAlignment="Top" Width="78"/>
         <Label Content="Ajouter une question" HorizontalAlignment="Left" Margin="452,462,0,0" VerticalAlignment="Top" Width="194"/>
         <Label Content="Game questions" HorizontalAlignment="Left" Margin="21,230,0,0" VerticalAlignment="Top" Height="32" Width="352"/>
         <ListView x:Name="listeViewQuestionGame" HorizontalAlignment="Left" Height="148" Margin="21,282,0,0" VerticalAlignment="Top" Width="461" ItemsSource="{Binding questionsGame}">
@@ -70,11 +70,17 @@
         <Button Content="Valider" HorizontalAlignment="Left" Margin="951,399,0,0" VerticalAlignment="Top" Width="74" Click="Button_Valider_Modif"/>
         <Button Content="Up" HorizontalAlignment="Left" Margin="487,130,0,0" VerticalAlignment="Top" Width="23" RenderTransformOrigin="0.348,-0.05" Click="Button_Orientation_Up"/>
         <Button Content="Down" HorizontalAlignment="Left" Margin="487,155,0,0" VerticalAlignment="Top" Width="23" RenderTransformOrigin="0.348,-0.05" Click="Button_Orientation_Down"/>
-        <ComboBox x:Name="ComboBoxFiliere" HorizontalAlignment="Left" Margin="745,550,0,0" VerticalAlignment="Top" Width="64">
+        <ComboBox x:Name="ComboBoxFiliere" HorizontalAlignment="Left" Margin="823,550,0,0" VerticalAlignment="Top" Width="64">
             <ComboBoxItem Content="AP"/>
             <ComboBoxItem Content="Réseau" IsSelected="True"/>
         </ComboBox>
-        <Label Content="Filiere" HorizontalAlignment="Left" Margin="745,518,0,0" VerticalAlignment="Top" Width="78"/>
+        <Label Content="Filiere" HorizontalAlignment="Left" Margin="823,518,0,0" VerticalAlignment="Top" Width="78"/>
+        <ComboBox x:Name="ComboBoxRightAnswer" HorizontalAlignment="Left" Margin="614,548,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem Content="Réponse 1" IsSelected="True"/>
+            <ComboBoxItem Content="Réponse 2" />
+            <ComboBoxItem Content="Réponse 3" />
+        </ComboBox>
+        <Label Content="Bonne réponse" HorizontalAlignment="Left" Margin="614,518,0,0" VerticalAlignment="Top" Width="78" RenderTransformOrigin="2.474,0.731"/>
 
     </Grid>
 </Page>

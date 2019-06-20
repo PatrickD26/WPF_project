@@ -97,11 +97,30 @@ namespace WPF_project.CoucheClient.Admin
                     }
                 }
 
+                int ControleComboBoxRightAnswer(List<int> responsesId, string s)
+                {
+                    if (s == "Réponse 1")
+                    {
+                        return responsesId[0];
+                    }
+                    else if(s == "Réponse 2")
+                    {
+                        return responsesId[1];
+                    }
+                    else if(s == "Réponse 3")
+                    {
+                        return responsesId[2];
+                    }
+
+                    return 0;
+                }
+
+
                 Models.Question q = new Models.Question()
                 {
                     IsGame = ControleComboBox(((ComboBoxItem)ComboBoxIsGame.SelectedItem).Content as string),
                     Label = Label.Text,
-                    IsOrientation = ControleComboBox(((ComboBoxItem)ComboBoxFiliere.SelectedItem).Content as string),
+                    IsOrientation = ControleComboBox(((ComboBoxItem)ComboBoxIsOrientation.SelectedItem).Content as string),
                     FiliereId = ControleComboBoxFiliere(((ComboBoxItem)ComboBoxFiliere.SelectedItem).Content as string),
                 };
 
@@ -124,6 +143,15 @@ namespace WPF_project.CoucheClient.Admin
 
                     win.dbConnection.orientationService.AddResponse(rep);
                 }
+
+                List<int> listeIdResponses = win.dbConnection.orientationService.GetResponseIdQuestionId(idQuestionAdd);
+                int idRightAnswer = ControleComboBoxRightAnswer(listeIdResponses, ((ComboBoxItem)ComboBoxRightAnswer.SelectedItem).Content as string);
+                if(idRightAnswer != 0)
+                {
+
+                    win.dbConnection.orientationService.UpdateQuestionRightResponse(idRightAnswer, idQuestionAdd);
+                }
+
 
                 if (q.IsOrientation == true)
                 {

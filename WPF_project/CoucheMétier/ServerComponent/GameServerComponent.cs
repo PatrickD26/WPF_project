@@ -39,7 +39,11 @@ namespace WPF_project.CoucheMétier.ServerComponent
                         IsGame = (bool)dataReader[0],
                         Label = dataReader[1].ToString(),
                         IsOrientation = (bool)dataReader[2],
-                        Id = Int32.Parse(dataReader[3].ToString())
+                        Id = Int32.Parse(dataReader[3].ToString()),
+                        Ordre = Int32.Parse(dataReader[4].ToString()),
+                        FiliereId = Int32.Parse(dataReader[5].ToString()),
+                        Answer = Int32.Parse(dataReader[6].ToString()),
+
                     };
 
                     questions.Add(question);

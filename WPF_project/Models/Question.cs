@@ -12,7 +12,10 @@ namespace WPF_project.Models
         private bool isGame;
         private string label;
         private bool isOrientation;
+        private int ordre;
         private int filiereId;
+        private int answer;
+
         private List<Response> questionAnswers;
 
         public int Id { get => id; set => id = value; }
@@ -21,5 +24,7 @@ namespace WPF_project.Models
         public bool IsOrientation { get => isOrientation; set => isOrientation = value; }
         public int FiliereId { get => filiereId; set => filiereId = value; }
         public List<Response> QuestionAnswers { get => questionAnswers; set => questionAnswers = value; }
+        public int Answer { get => answer; set => answer = value; }
+        public int Ordre { get => ordre; set => ordre = value; }
     }
 }

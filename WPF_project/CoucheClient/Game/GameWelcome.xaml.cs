@@ -19,8 +19,10 @@ namespace WPF_project.CoucheClient.Game
     /// </summary>
     public partial class Game : Page
     {
+        MainWindow win = (MainWindow)System.Windows.Application.Current.MainWindow;
         List<Models.Question> questionArray;
         int score = 0;
+
         public Game()
         {
             InitializeComponent();
@@ -32,9 +34,26 @@ namespace WPF_project.CoucheClient.Game
             }
         }
 
+        public Game(string p)
+        {
+
+            InitializeComponent();
+            pseudo.Content = p + ",";
+            questionArray = win.dbConnection.gameService.RetrieveGameQuestions();
+            foreach (Models.Question question in questionArray)
+            {
+                question.QuestionAnswers = win.dbConnection.gameService.GetQuestionAnswers(question.Id);
+         
+            }
+
+
+
+        }
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Console.WriteLine("BONJOUR");
+            QuestionPage questionPage = new QuestionPage(questionArray);
+            this.NavigationService.Navigate(questionPage);
         }
 
         private void correctAnswer()

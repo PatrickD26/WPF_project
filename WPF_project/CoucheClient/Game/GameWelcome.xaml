@@ -15,7 +15,10 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <TextBlock HorizontalAlignment="Left" Margin="224,123,0,0" TextWrapping="Wrap" Text="Bonjour {{nickname}} et bienvenue dans notre jeu pour tester tes connaissances !" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="176" Width="625" FontFamily="Times New Roman" FontSize="36"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="222,139,0,0" TextWrapping="Wrap" Text="et bienvenue dans notre jeu pour tester tes connaissances !" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="176" Width="625" FontFamily="Times New Roman" FontSize="36"/>
         <Button Content="Commencer &gt;" HorizontalAlignment="Left" Margin="336,81,0,0" Grid.Row="1" VerticalAlignment="Top" Width="398" Grid.ColumnSpan="2" Height="40" FontSize="20" Click="Button_Click"/>
+        <Label x:Name="pseudo" HorizontalAlignment="Left" Margin="353,96,0,0" VerticalAlignment="Top" Width="159" Height="48" FontFamily="Times New Roman" FontSize="36"/>
+        <Label Content="Bonjour" HorizontalAlignment="Left" Margin="218,96,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="36"/>
     </Grid>
 </Page>

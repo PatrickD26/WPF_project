@@ -70,3 +70,5 @@ C:\Users\patri\source\repos\WPF_project\WPF_project\bin\Debug\System.Numerics.Ve
 C:\Users\patri\source\repos\WPF_project\WPF_project\obj\Debug\WPF_project.csprojAssemblyReference.cache
 C:\Users\patri\source\repos\WPF_project\WPF_project\bin\Debug\System.Threading.Tasks.Extensions.dll
 C:\Users\patri\source\repos\WPF_project\WPF_project\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Repos\WPF_project\WPF_project\obj\Debug\CoucheClient\Game\QuestionPage.g.cs
+C:\Repos\WPF_project\WPF_project\obj\Debug\CoucheClient\Game\QuestionPage.baml

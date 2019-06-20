@@ -21,7 +21,7 @@ namespace WPF_project.CoucheClient.Orientation
     /// </summary>
     public partial class OrientationWelcome : Page
     {
-        List<Models.Question> questions;
+        //List<Models.Question> questions;
         public OrientationWelcome()
         {
             InitializeComponent();

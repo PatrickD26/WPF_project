@@ -38,7 +38,7 @@ namespace WPF_project.CoucheClient.Homepage
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            CoucheClient.Game.Game gamePage = new CoucheClient.Game.Game();
+            CoucheClient.Game.Game gamePage = new CoucheClient.Game.Game(pseudo.Text);
             this.NavigationService.Navigate(gamePage);
         }
     }
