@@ -27,13 +27,11 @@ namespace WPF_project.CoucheMétier.ServerComponent
                 NpgsqlDataReader dataReader = command.ExecuteReader();
                 while (dataReader.Read())
                 {
-                    MessageBox.Show((String)dataReader[1]);
                     Models.Question retrievedQuestion = new Models.Question();
                     retrievedQuestion.IsGame = (bool)dataReader[0];
                     retrievedQuestion.Label = (String)dataReader[1];
                     retrievedQuestion.IsOrientation = (bool)dataReader[2];
                     retrievedQuestion.Id = (int)dataReader[3];
-                    retrievedQuestion.QuestionAnswers = retrieveGameAnswers(retrievedQuestion);
                     questionArray.Add(retrievedQuestion); 
                 }
                 this.connection.Close();
@@ -48,7 +46,7 @@ namespace WPF_project.CoucheMétier.ServerComponent
         public List<Models.Response> retrieveGameAnswers(Models.Question question)
         {
             List<Models.Response> responseArray = new List<Models.Response>();
-            NpgsqlCommand command = new NpgsqlCommand("select * from response WHERE questionid=:id", connection);
+            NpgsqlCommand command = new NpgsqlCommand("select * from response WHERE questionid=4", connection);
             command.Parameters.Add("id", NpgsqlTypes.NpgsqlDbType.Integer);
             command.Parameters[0].Value = question.Id;
             try
@@ -61,7 +59,7 @@ namespace WPF_project.CoucheMétier.ServerComponent
                     retrievedResponse.Id = (int)dataReader[0];
                     retrievedResponse.Questionid = (int)dataReader[1];
                     retrievedResponse.Label = (String)dataReader[2];
-                    question.QuestionAnswers.Add(retrievedResponse);
+                    responseArray.Add(retrievedResponse);
                 }
                 this.connection.Close();
             }
