@@ -11,7 +11,7 @@
     <Grid>
         <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="360" Margin="650,70,0,0" Stroke="Black" VerticalAlignment="Top" Width="389"/>
 
-        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="148" Margin="162,492,0,0" Stroke="Black" VerticalAlignment="Top" Width="746"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="148" Margin="162,492,0,0" Stroke="Black" VerticalAlignment="Top" Width="778"/>
 
         <Label Content="Orientation questions" HorizontalAlignment="Left" Margin="21,18,0,0" VerticalAlignment="Top" Height="32" Width="352"/>
         <ListView x:Name="listeViewQuestion" HorizontalAlignment="Left" Height="148" Margin="21,70,0,0" VerticalAlignment="Top" Width="461" ItemsSource="{Binding questions}">
@@ -24,7 +24,7 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button Content="Ajouter" HorizontalAlignment="Left" Margin="756,550,0,0" VerticalAlignment="Top" Width="68" RenderTransformOrigin="-22.804,10.325" Click="Button_Add"/>
+        <Button Content="Ajouter" HorizontalAlignment="Left" Margin="851,550,0,0" VerticalAlignment="Top" Width="68" RenderTransformOrigin="-22.804,10.325" Click="Button_Add"/>
         <Button Content="-" HorizontalAlignment="Left" Margin="487,71,0,0" VerticalAlignment="Top" Width="23" Click="Button_Delete" RenderTransformOrigin="0.348,-0.825"/>
         <Button Content="Modifier" HorizontalAlignment="Left" Margin="487,96,0,0" VerticalAlignment="Top" Width="53" Click="Button_Modif_Orientation"/>
         <ComboBox x:Name="ComboBoxIsGame" HorizontalAlignment="Left" Margin="178,548,0,0" VerticalAlignment="Top" Width="64">
@@ -70,6 +70,11 @@
         <Button Content="Valider" HorizontalAlignment="Left" Margin="951,399,0,0" VerticalAlignment="Top" Width="74" Click="Button_Valider_Modif"/>
         <Button Content="Up" HorizontalAlignment="Left" Margin="487,130,0,0" VerticalAlignment="Top" Width="23" RenderTransformOrigin="0.348,-0.05" Click="Button_Orientation_Up"/>
         <Button Content="Down" HorizontalAlignment="Left" Margin="487,155,0,0" VerticalAlignment="Top" Width="23" RenderTransformOrigin="0.348,-0.05" Click="Button_Orientation_Down"/>
+        <ComboBox x:Name="ComboBoxFiliere" HorizontalAlignment="Left" Margin="745,550,0,0" VerticalAlignment="Top" Width="64">
+            <ComboBoxItem Content="AP"/>
+            <ComboBoxItem Content="Réseau" IsSelected="True"/>
+        </ComboBox>
+        <Label Content="Filiere" HorizontalAlignment="Left" Margin="745,518,0,0" VerticalAlignment="Top" Width="78"/>
 
     </Grid>
 </Page>

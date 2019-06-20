@@ -84,7 +84,7 @@ namespace WPF_project.CoucheMétier.ServerComponent
 
         public void AddQuestion(Models.Question q)
         {
-            NpgsqlCommand command = new NpgsqlCommand("INSERT INTO QUESTION VALUES (:isGame, :label, :isOrientation)", connection);
+            NpgsqlCommand command = new NpgsqlCommand("INSERT INTO QUESTION(isgame, label, isorientation, filiere) VALUES (:isGame, :label, :isOrientation, :filiereId)", connection);
 
             command.Parameters.Add(new NpgsqlParameter("isGame", NpgsqlDbType.Boolean));
             command.Parameters[0].Value = q.IsGame;
@@ -92,6 +92,8 @@ namespace WPF_project.CoucheMétier.ServerComponent
             command.Parameters[1].Value = q.Label;
             command.Parameters.Add(new NpgsqlParameter("isOrientation", NpgsqlDbType.Boolean));
             command.Parameters[2].Value = q.IsOrientation;
+            command.Parameters.Add(new NpgsqlParameter("filiereId", NpgsqlDbType.Integer));
+            command.Parameters[3].Value = q.FiliereId;
 
             try
             {

@@ -86,11 +86,23 @@ namespace WPF_project.CoucheClient.Admin
                         return false;
                 }
 
+                int ControleComboBoxFiliere(string s)
+                {
+                    if(s == "AP")
+                    {
+                        return 1;
+                    } else
+                    {
+                        return 2;
+                    }
+                }
+
                 Models.Question q = new Models.Question()
                 {
                     IsGame = ControleComboBox(((ComboBoxItem)ComboBoxIsGame.SelectedItem).Content as string),
                     Label = Label.Text,
-                    IsOrientation = ControleComboBox(((ComboBoxItem)ComboBoxIsOrientation.SelectedItem).Content as string)
+                    IsOrientation = ControleComboBox(((ComboBoxItem)ComboBoxFiliere.SelectedItem).Content as string),
+                    FiliereId = ControleComboBoxFiliere(((ComboBoxItem)ComboBoxFiliere.SelectedItem).Content as string),
                 };
 
                 win.dbConnection.orientationService.AddQuestion(q);

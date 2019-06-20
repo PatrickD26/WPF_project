@@ -12,10 +12,12 @@ namespace WPF_project.Models
         private bool isGame;
         private string label;
         private bool isOrientation;
+        private int filiereId;
 
         public int Id { get => id; set => id = value; }
         public bool IsGame { get => isGame; set => isGame = value; }
         public string Label { get => label; set => label = value; }
         public bool IsOrientation { get => isOrientation; set => isOrientation = value; }
+        public int FiliereId { get => filiereId; set => filiereId = value; }
     }
 }
