@@ -36,7 +36,7 @@ namespace WPF_project.CoucheClient.Admin
             InitializeComponent();
 
             this.questions = win.dbConnection.orientationService.RetriveOrientationQuestion();
-            this.questionsGame = win.dbConnection.gameService.RetriveOrientationQuestionGame();
+            this.questionsGame = win.dbConnection.gameService.RetrieveGameQuestions();
 
             listeViewQuestion.ItemsSource = questions;
             listeViewQuestionGame.ItemsSource = questionsGame;
@@ -66,7 +66,7 @@ namespace WPF_project.CoucheClient.Admin
         {
             Models.Question q = listeViewQuestionGame.SelectedItem as Models.Question;
             win.dbConnection.gameService.DeleteQuestion(q);
-            this.questionsGame = win.dbConnection.gameService.RetriveOrientationQuestionGame();
+            this.questionsGame = win.dbConnection.gameService.RetrieveGameQuestions();
             listeViewQuestion.ItemsSource = questionsGame;
             listeViewQuestion.Items.Refresh();
         }
@@ -133,7 +133,7 @@ namespace WPF_project.CoucheClient.Admin
                 }
                 else
                 {
-                    this.questionsGame = win.dbConnection.gameService.RetriveOrientationQuestionGame();
+                    this.questionsGame = win.dbConnection.gameService.RetrieveGameQuestions();
                     listeViewQuestionGame.ItemsSource = questionsGame;
                     listeViewQuestionGame.Items.Refresh();
                 }
@@ -148,7 +148,7 @@ namespace WPF_project.CoucheClient.Admin
         private void Button_Modif_Orientation(object sender, RoutedEventArgs e)
         {
             questionAModifier = listeViewQuestion.SelectedItem as Models.Question;
-            reponsesAModifier = win.dbConnection.orientationService.GetResponsesByQuestionId(questionAModifier.Id);
+            reponsesAModifier = win.dbConnection.orientationService.GetQuestionAnswers(questionAModifier.Id);
 
             ModifLabel.Text = questionAModifier.Label;
             ModifReponse1.Text = reponsesAModifier[0].Label;
@@ -159,7 +159,7 @@ namespace WPF_project.CoucheClient.Admin
         private void Button_Modif_Game(object sender, RoutedEventArgs e)
         {
             questionAModifier = listeViewQuestionGame.SelectedItem as Models.Question;
-            reponsesAModifier = win.dbConnection.gameService.GetResponsesByQuestionId(questionAModifier.Id);
+            reponsesAModifier = win.dbConnection.gameService.GetQuestionAnswers(questionAModifier.Id);
 
             ModifLabel.Text = questionAModifier.Label;
             ModifReponse1.Text = reponsesAModifier[0].Label;
@@ -201,7 +201,7 @@ namespace WPF_project.CoucheClient.Admin
                         win.dbConnection.orientationService.UpdateResponse(questionAModifier.Id, response.Id, response.Label);
                     }
 
-                    this.questionsGame = win.dbConnection.gameService.RetriveOrientationQuestionGame();
+                    this.questionsGame = win.dbConnection.gameService.RetrieveGameQuestions();
                     listeViewQuestionGame.ItemsSource = questionsGame;
                     listeViewQuestionGame.Items.Refresh();
                 }
